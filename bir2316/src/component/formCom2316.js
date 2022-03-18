@@ -4,7 +4,8 @@ import formPdf from '../pdf/2316Jan2018ENCSfinal.pdf'
 import classes from '../page/css/layout.module.css'
 
 const FormCom2316 = (props) => {
-    console.log('props', props)
+  const empName = props.data.employeeName
+    console.log('props', props.data[0])
     const [pdfInfo, setPdfInfo] = useState([]);
     const viewer = useRef(null);
 
@@ -104,7 +105,7 @@ const FormCom2316 = (props) => {
       });
 
       //employee name
-      firstPage.drawText(props.data != undefined ? props.data.employeeName : '' , {
+      firstPage.drawText(props.data[0] != undefined ? props.data[0].employeeName : '' , {
         x: 32,
         y:765,
         size: 10.5,
