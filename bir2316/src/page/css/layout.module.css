@@ -1,0 +1,19 @@
+.column {
+    float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+  display: table;
+  clear: both;
+  }
+
+  .selectBox {
+      width: 400;
+      height: 500;
+      border: 1;
+      border-color: black;
+  }
