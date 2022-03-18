@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import formPdf from '../pdf/2316Jan2018ENCSfinal.pdf'
 import classes from '../page/css/layout.module.css'
 
-const FormCom2316 = () => {
-
+const FormCom2316 = (props) => {
+    console.log('props', props)
     const [pdfInfo, setPdfInfo] = useState([]);
     const viewer = useRef(null);
 
@@ -104,7 +104,7 @@ const FormCom2316 = () => {
       });
 
       //employee name
-      firstPage.drawText("ABELLA, ASTORIO JR RULIDA", {
+      firstPage.drawText(props.data != undefined ? props.data.employeeName : '' , {
         x: 32,
         y:765,
         size: 10.5,

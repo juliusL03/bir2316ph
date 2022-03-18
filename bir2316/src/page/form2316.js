@@ -29,7 +29,7 @@ const Form2316 = () => {
         </div>
             </div>
             
-           <FormCom2316 data={formTwo}/>
+           <FormCom2316 data={ formTwo && formTwo}/>
         </div>
         
     );
